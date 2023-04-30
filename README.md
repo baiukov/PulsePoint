@@ -27,7 +27,7 @@ The project is available on the link: https://esotemp.vse.cz/~baia04/sp
 - [Friends](https://cdn.discordapp.com/attachments/715921444059611187/1098781035321368767/Friends.png)
 - [Profile](https://cdn.discordapp.com/attachments/715921444059611187/1098781273130008718/Profile.png)
 
-> [Clicable design prototype](https://www.figma.com/file/fE7777Kw5WzXOeVOoUx4bB/Pulse-Point?node-id=19%3A994&t=Xge3BIzK8ftmfYze-1)
+> [Clikcable design prototype](https://www.figma.com/file/fE7777Kw5WzXOeVOoUx4bB/Pulse-Point?node-id=19%3A994&t=Xge3BIzK8ftmfYze-1)
 
 ### Database prototype
 > - [Logic model](https://cdn.discordapp.com/attachments/727912939444502538/1102288014153101454/image.png)
