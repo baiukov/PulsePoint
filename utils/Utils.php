@@ -72,6 +72,9 @@ class Utils implements IUtils {
 
     public function newPost(int $userID) {
         $db = Utils::$db;
+        if (!$_POST['text']) {
+            return;
+        }
         $text = htmlspecialchars(trim($_POST['text']));
         $now = new DateTime();
         $post = [
@@ -201,6 +204,21 @@ class Utils implements IUtils {
             ['userID' => $userID]
         );
         return $result[0]['is_admin'] === 1 ? true : false;
+    }
+
+    public function getUserMetrics(int $userID) {
+        $db = $this -> getDB();
+        $sql = "SELECT COUNT(*) as a FROM `posts` WHERE `author_id` = :userID";
+        $postAmount = $db -> execute($sql, ['userID' => $userID])[0]['a'];
+        $sql = "SELECT COUNT(*) as a FROM `likes` WHERE `user_id` = :userID";
+        $likeAmount = $db -> execute($sql, ['userID' => $userID])[0]['a'];
+        $sql = "SELECT COUNT(*) as a FROM `comments` WHERE `author_id` = :userID";
+        $commentAmount = $db -> execute($sql, ['userID' => $userID])[0]['a'];
+        return [
+            "postAmount" => $postAmount,
+            "likeAmount" => $likeAmount,
+            "commentAmount" => $commentAmount
+        ];
     }
 }
 

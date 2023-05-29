@@ -36,14 +36,14 @@ $friends = $db -> execute(
                     <img src='<?php echo $user['avatar']; ?>' style="max-height: 80px">
                     <h4 class='post_header' style="top: 26px"><?php echo $user['name'] . ' ' . $user['surname']; ?></h4>
                     <div class = 'additional_actions'>
-                        <a href = '../utils/addChat.php/?user1ID=<?php echo $_COOKIE['userID']?>&user2ID=<?php echo $friendID; ?>'>
-                            <b><?php echo $messages['sendMessage'][$language]; ?></b>
+                        <a href = '../utils/addChat.php/?user1ID=<?php echo $_COOKIE['userID']?>&user2ID=<?php echo $friendID; ?>&friends=true'>
+                            <b><?php echo $messages[$language]['sendMessage']; ?></b>
                         </a>
                         <a 
                             href = '../utils/deleteFriend.php/?user1ID=<?php echo $_COOKIE['userID']?>&user2ID=<?php echo $friendID; ?>'
                             style = 'color: #ff9f9f'
                         >
-                            <?php echo $messages['deleteFriend'][$language]; ?>
+                            <?php echo $messages[$language]['deleteFriend']; ?>
                         </a>
                     </div>
                 </div>

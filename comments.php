@@ -4,15 +4,10 @@ require realpath(__DIR__ . '/..') . '/includes/header.php';
 require realpath(__DIR__ . '/..') . '/messages.php';
 require('../utils/Utils.php');
 require_once('../utils/Database.php');
-if (isset($_SESSION['logout']) || !isset($_COOKIE['userID'])) {
-    setcookie('userID', '', time());
-    unset($_SESSION['logout']);
-    header('Location: ../utils/setSession.php?page=main');
-}
 $theme = isset($_SESSION['theme']) ? $_SESSION['theme'] : '';
 $language = isset($_SESSION['language']) ? $_SESSION['language'] : 'CZ';
+$db = new Database();
 $utils = Utils::getInstance();
-$db = $utils -> getDB();
 ?>
 
 <body id=<?php echo $theme; ?>>
@@ -57,7 +52,7 @@ $db = $utils -> getDB();
             <?php
             $comments = $db->getComments($post['post_id']);
             foreach ($comments as $comment):
-                $author = $utils -> getUser($comment['author_id']);
+                $author = $utils -> getUser($post['author_id']);
             ?>
                 <div class='comment<?php echo $theme; ?>'>
                     <div class = 'comment_header'>
@@ -65,7 +60,7 @@ $db = $utils -> getDB();
                         <h5 class = 'comment_title'><?php echo $author['name'] . ' ' . $author['surname']; ?></h5>
                     </div>
                     <div class = 'comment_content'>
-                        <p class='comment_text'><?php echo htmlspecialchars($comment['text']); ?></p><br>
+                        <p class='comment_text'><?php echo $comment['text']; ?></p><br>
                     </div>
                 </div>
             <?php endforeach; ?>
