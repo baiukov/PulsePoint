@@ -12,7 +12,7 @@ The project is available on the link: https://esotemp.vse.cz/~baia04/sp
 
 > [Usecase Diagram](https://drive.google.com/file/d/1Px13BAkCzHFw9hZKSgOeWQFXBCCmwZOI/view?usp=sharing)
 
-## Technologies
+## Technologie
 ### Architecture
 - WebServer: Apache
 - BackEnd: PHP 8
@@ -30,8 +30,8 @@ The project is available on the link: https://esotemp.vse.cz/~baia04/sp
 > [Clikcable design prototype](https://www.figma.com/file/fE7777Kw5WzXOeVOoUx4bB/Pulse-Point?node-id=19%3A994&t=Xge3BIzK8ftmfYze-1)
 
 ### Database prototype
-> - [Logic model](https://cdn.discordapp.com/attachments/727912939444502538/1102288014153101454/image.png)
-> - [Physic model](https://cdn.discordapp.com/attachments/727912939444502538/1102288041890025612/image.png)
+> - [Logical model](https://img001.prntscr.com/file/img001/fyVdqx23TXixCyVRECVKNw.png)
+> - [Physical model](https://img001.prntscr.com/file/img001/ntDgEFMKTYCee_lvrvmCkg.png)
 
 > ### [Process diagram](https://app.diagrams.net/#G1vrb4y1bZtPI6bhygOiHgVsjLg2GVgqRf)
 > 
