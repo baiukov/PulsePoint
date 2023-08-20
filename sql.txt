@@ -3,7 +3,7 @@ user_id INT NOT NULL AUTO_INCREMENT,
 email VARCHAR(255) NOT NULL, 
 phoneNumber VARCHAR(20) NOT NULL,
 password VARCHAR(1000) NOT NULL,
-is_admin BOOLEAN NOT NULL
+is_admin BOOLEAN NOT NULL,
      PRIMARY KEY (user_id)
 );
 
@@ -26,7 +26,7 @@ date DATETIME NOT NULL,
 
 CREATE TABLE likes (
 	user_id INT NOT NULL,
-	post_id INT NOT NULL,
+	post_id INT NOT NULL
 );
 
 CREATE TABLE comments (
