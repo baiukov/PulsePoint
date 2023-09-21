@@ -1,7 +1,7 @@
 # PulsePoint
 This is my pet project written in PHP for high school. Pulse Point is a social media platform for people, who want to stay in touch with their friends, share news, write comments, and communicate through chats. They can also create their own profiles.
 
-The project is available on the link: https://esotemp.vse.cz/~baia04/sp
+The project is available on the link: https://eso.vse.cz/~baia04/sp
 
 ### Features
 - Editable profiles
